@@ -1,4 +1,4 @@
-package EJ7;
+package EJ8;
 
 public class Jugador {
     private int vida;

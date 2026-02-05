@@ -1,3 +1,5 @@
+package EJ1;
+
 public class Alumno {
     private String nombre;
     private double nota;
@@ -16,6 +18,6 @@ public class Alumno {
     }
 
     public void mostrarDatos() {
-        System.out.println("Nombre: " + this.nombre + " Nota:nigger " + this.nota);
+        System.out.println("Nombre: " + this.nombre + " Nota: " + this.nota);
     }
 }

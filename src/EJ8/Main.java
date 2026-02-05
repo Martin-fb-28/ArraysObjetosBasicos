@@ -1,11 +1,11 @@
-package EJ7;
+package EJ8;
 
 import java.util.Random;
 public class Main{
     public static void main(String[] args){
         Random rand = new Random();
 
-        EJ7.Jugador arrayJugadores[] = new Jugador[4];
+        EJ8.Jugador arrayJugadores[] = new Jugador[4];
         arrayJugadores[0] = new Jugador(rand.nextInt(0,101), "Agustín" );
         arrayJugadores[1] = new Jugador(rand.nextInt(0,101), "Diddy");
         arrayJugadores[2] = new Jugador(rand.nextInt(0,101), "Trump");
@@ -17,10 +17,17 @@ public class Main{
             }
         }
 
+        int contadorMuertos = 0;
+        for(int i = 0; i< arrayJugadores.length; i++){
+            if(arrayJugadores[i].getVida() <= 0){
+                contadorMuertos ++;
+            }
+        }
+        System.out.println("Los jugadores que han muerto son: " + contadorMuertos);
+
         for(int i = 0; i< arrayJugadores.length; i++){
             arrayJugadores[i].recibirDanio();
             System.out.println("\nTras recibir daño, los jugadores tienen esta vida restante: " + arrayJugadores[i].getNombre() + ": " + arrayJugadores[i].getVida());
         }
-
     }
 }
